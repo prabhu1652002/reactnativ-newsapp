@@ -11,7 +11,7 @@ const Card  = () => {
                 <Text>Dummy text</Text>
             </View>
             <View style={styles.descriptionWrapper}>
-                <Text>Dummy text</Text>
+                <Text>Dummy text changed</Text>
             </View>
 
         </View>
