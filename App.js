@@ -10,6 +10,8 @@ export default function App() {
         <Header/>
         <Card/>
         <Text>Hello world!</Text>
+        {/* <Text>Hello world!</Text> */}
+        {/* <Text>Hello world!</Text> */}
     </View>
   );
 }

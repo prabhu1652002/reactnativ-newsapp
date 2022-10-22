@@ -5,7 +5,9 @@ const Card  = () => {
     return(
         <View style={styles.card} >
             <View style={styles.imageWrapper}>
-                <Image source={require('../../assets/favicon.png')}/>
+                <Image source={require('../../assets/favicon.png')}
+                 style={styles.image}
+                />
             </View>
             <View style={styles.titleWrapper}>
                 <Text>Dummy text</Text>
@@ -19,6 +21,10 @@ const Card  = () => {
 }
 
 const styles= StyleSheet.create({
+    image:{
+        height: '100%',
+        width:'100%'
+    },
     card:{
         backgroundColor:'white',
         height: 300,
