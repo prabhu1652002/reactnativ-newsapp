@@ -10,10 +10,10 @@ const Card  = () => {
                 />
             </View>
             <View style={styles.titleWrapper}>
-                <Text>Dummy text</Text>
+                <Text style={styles.title}>Dummy text</Text>
             </View>
             <View style={styles.descriptionWrapper}>
-                <Text>Dummy text changed</Text>
+                <Text style={styles.description}>Dummy text changed</Text>
             </View>
 
         </View>
@@ -21,6 +21,13 @@ const Card  = () => {
 }
 
 const styles= StyleSheet.create({
+    title: {
+        fontFamily: 'OswaldBold',
+    },
+    description :{
+        fontFamily: '',
+
+    },
     image:{
         height: '100%',
         width:'100%'
