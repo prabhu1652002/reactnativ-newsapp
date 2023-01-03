@@ -48,19 +48,24 @@ const NewsListScreen = props => {
             <Card 
               texttitle={"Hello news 7"} 
               textcontent={"Content 7"} 
-              src={require('../../assets/icon.png')}/>
+              src={require('../../assets/icon.png')}
+              navigation={props.navigation}/>
+
             <Card 
               texttitle={"Hello news 8"} 
               textcontent={"Content 8"} 
-              src={require('../../assets/splash.png')}/>
+              src={require('../../assets/splash.png')}
+              navigation={props.navigation}/>
             <Card 
               texttitle={"Hello news 9"} 
               textcontent={"Content 9"} 
-              src={require('../../assets/favicon.png')}/>
+              src={require('../../assets/favicon.png')}
+              navigation={props.navigation}/>
             <Card 
               texttitle={"Hello news 10"} 
               textcontent={"Content 10"} 
-              src={require('../../assets/favicon.png')}/>
+              src={require('../../assets/favicon.png')}
+              navigation={props.navigation}/>
         </View>
         </ScrollView>
     )
