@@ -17,7 +17,7 @@ const Tabs = createBottomTabNavigator();
 const HeaderRight = () => {                 // for info button on right side of header of any screen
     const navigation = useNavigation();
     return(
-        <MaterialIcons name = "info " size={24} onPress={() => (
+        <MaterialIcons name = "info" size={24} onPress={() => (
             navigation.navigate('AboutScreen')
         )}></MaterialIcons>
     )
@@ -89,9 +89,10 @@ function AppNavigator(){
             {/* <Drawer.Navigator>
                 <Drawer.Screen name="News" component={TabsNavigator}></Drawer.Screen>
                 <Drawer.Screen name="About" component={AboutScreen}></Drawer.Screen>
-            </Drawer.Navigator> */}
+            </Drawer.Navigator> */}                 
         </NavigationContainer>
     )
+    // drawer not working some module error
 }
 
 export default AppNavigator;
