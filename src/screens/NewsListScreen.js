@@ -16,25 +16,28 @@ const NewsListScreen = props => {
     );
 
     const {articles}=useSelector(state => state.news.articles);
+    const {truncatedArticles}=[];
       // console.log(articles);
 
 
     return (
-        <ScrollView style={{backgroundColor:'black'}}>
+        // <ScrollView style={{backgroundColor:'black'}}>
           <FlatList 
               
               data={articles}
               keyExtractor={item => item.url}
               renderItem={({item}) => (
+                
                 <Card 
                   navigation={props.navigation}
                   title={item.title} 
                   image={item.urlToImage}
                   description={item.description}
+                  url={item.url}
                 />
               )}
               />
-        </ScrollView>
+        // </ScrollView>
     )
 }
 const styles= StyleSheet.create({
