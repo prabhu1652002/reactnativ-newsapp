@@ -2,22 +2,26 @@ import React from 'react';
 import { StyleSheet, Text, View ,Platform, Image ,TouchableOpacity} from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 
-const Card  = ({texttitle,textcontent,src,navigation}) => {
+const Card  = props => {
     return(
-        <TouchableOpacity onPress={()=> navigation.navigate('NewsDetails')}>
+        <TouchableOpacity onPress={()=> props.navigation.navigate('NewsDetails')}>
             <View style={styles.card} >
                 <View style={styles.imageWrapper}>
                     <Image 
-                        source={src}
+                        source={{uri:props.image}}
                         style={styles.image}
                     />
                 </View>
                 <View style={styles.titleWrapper}>
-                    <Text style={styles.title}>{texttitle}</Text>
+                    <Text style={styles.title}>
+                        {props.title.length>35? props.title.slice(0,35)+'...':props.title}
+                    </Text>
                     <MaterialIcons name="favorite-border" color="black" size={24} />
                 </View>
                 <View style={styles.descriptionWrapper}>
-                    <Text style={styles.description}>{textcontent}</Text>
+                    <Text style={styles.description}>
+                        {props.description.length>170?props.description.slice(0,170)+'...':props.description}
+                    </Text>
                 </View>
 
             </View> 
@@ -26,6 +30,10 @@ const Card  = ({texttitle,textcontent,src,navigation}) => {
 }
 
 const styles= StyleSheet.create({
+    title:{
+        fontSize:17,
+        fontWeight:'bold'
+    },
     image:{
         height: '100%',
         width:'100%'
@@ -35,9 +43,9 @@ const styles= StyleSheet.create({
         height: 300,
         margin: 20,
         borderRadius: 10,
-        shadowColor: 'black',
-        shadowOpacity: 0.5,
-        shadowOffset: {width: 2, height: 2},
+        shadowColor: 'white',
+        shadowOpacity: 1,
+        shadowOffset: {width: 6, height: 6},
         shadowRadius: 15,
         elevation: 5
     },
@@ -56,7 +64,6 @@ const styles= StyleSheet.create({
     },
     descriptionWrapper:{
         paddingHorizontal: 15,
-
     }
 })
 

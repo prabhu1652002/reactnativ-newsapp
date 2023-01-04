@@ -7,6 +7,10 @@ import AppNavigator from './src/navigation/AppNavigator';
 import {Provider} from 'react-redux';
 import store from './src/redux/store';
 
+
+// news api-key:  a6673d4869ce4e929adbb67d5058086e
+
+
 const loadFonts=()=>{
   return Font.loadAsync({
       'Oswald': require('E:/Appdev/NewsApp/assets/fonts/Oswald-Regular.ttf'),

@@ -38,30 +38,30 @@ function FavoriteNavigator(){
         </Stack.Navigator>
     )
 }
-function TabsNavigator(){
-    return (
-        <Tabs.Navigator 
-        screenOptions={ 
-            ({route})=>({
+// function TabsNavigator(){
+//     return (
+//         <Tabs.Navigator 
+//         screenOptions={ 
+//             ({route})=>({
             
-            tabBarIcon: () => {
-                let iconName;
-                if(route.name=='Home'){
-                    iconName="home"
-                }else if(route.name=='Favorites'){
-                    iconName="favorite"
-                }
-                return(
-                    <MaterialIcons name={iconName} size={24}></MaterialIcons>
-                )
-            }
-        })}
-        >
-            <Tabs.Screen name = "Home" component={HomeNavigator} options={{headerShown: false}}/>
-            <Tabs.Screen name = "Favorites" component={FavoriteNavigator} />
-        </Tabs.Navigator>
-    )
-}
+//             tabBarIcon: () => {
+//                 let iconName;
+//                 if(route.name=='Home'){
+//                     iconName="home"
+//                 }else if(route.name=='Favorites'){
+//                     iconName="favorite"
+//                 }
+//                 return(
+//                     <MaterialIcons name={iconName} size={24}></MaterialIcons>
+//                 )
+//             }
+//         })}
+//         >
+//             <Tabs.Screen name = "Home" component={HomeNavigator} options={{headerShown: false}}/>
+//             <Tabs.Screen name = "Favorites" component={FavoriteNavigator} />
+//         </Tabs.Navigator>
+//     )
+// }
 // main navigtion system, tab-> stack
 function AppNavigator(){
     return (
