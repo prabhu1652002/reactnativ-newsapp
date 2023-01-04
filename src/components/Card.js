@@ -15,17 +15,22 @@ const Card  = props => {
 
 
     return(
-        <TouchableOpacity onPress={()=> props.navigation.navigate('NewsDetails')}>
+        <TouchableOpacity onPress={()=> {
+            props.navigation.navigate('NewsDetails',{
+
+                    articleUrl: props.url
+            })
+        }}>
             <View style={styles.card} >
                 <View style={styles.imageWrapper}>
                     <Image 
-                        source={{uri:props.image}}
+                        source={{uri:props.image?props.image:"google.com"}}
                         style={styles.image}
                     />
                 </View>
                 <View style={styles.titleWrapper}>
                     <Text style={styles.title}>
-                        {props.title.length>30? props.title.slice(0,30)+'...':props.title}
+                        {props.title && props.title.length>30? props.title.slice(0,30)+'...':props.title}
                     </Text>
                     <MaterialIcons name={isFav?"favorite":"favorite-border"} color="black" size={24} onPress={() => {
                         dispatch(newsAction.toggleFavorites(props.url))
@@ -33,7 +38,7 @@ const Card  = props => {
                 </View>
                 <View style={styles.descriptionWrapper}>
                     <Text style={styles.description}>
-                        {props.description.length>170?props.description.slice(0,170)+'...':props.description}
+                        {props.description && props.description.length>170 ?props.description.slice(0,170)+'...':props.description}
                     </Text>
                 </View>
 
